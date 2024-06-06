@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
-import { FaBars, FaTimes } from 'react-icons/fa'
-import logo from './images/logo.png'
-import './Navbar.css'
-use client; 
+'use client'; 
+import React, { useState } from 'react';
+import styles from "./Navbar.module.css"
+import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../images/logo.png';
+
 function Navbar() {
     const [click, setClick] = useState(false);
   
