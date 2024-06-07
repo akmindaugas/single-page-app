@@ -1,5 +1,5 @@
 
-.container {
+.header {
     position: fixed;
     height: 90px;
     width: 100%;
@@ -12,7 +12,7 @@
     
 }
 
-.container .navbar {
+.header .navBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,73 +20,80 @@
     margin: auto;
     height: 100%;
     padding: 0 1rem;
+    border: 2px solid green;
     
 }
-
-.container .nav-menu a {
-    color: #ffffff;
+.logo{
+    width: 100px;
+    height: 100px;
+    border: 2px solid red;
 }
-
-.container .navbar img {
-    width: 250px;
-    height: auto;
-}
-
-.container .nav-menu {
+.navList{
     display: flex;
 }
 
-.container .nav-item {
+ .navItem a{
+    color: aliceblue;
     padding: 1rem;
     font-weight: 500;
+    list-style: none;
 }
 
-.container .nav-item a:hover {
-    padding-bottom: 12px;
-    border-bottom: 3px solid var(--secondary-color);
+.header .navItem a:hover {
+    padding-bottom: 6px;
+    border-bottom: 3px solid rgb(231, 231, 13);
 }
 
-.hamburger {
+.navBar .hamburger {
     display: none;
 }
 
 
 @media screen and (max-width:940px) {
-    .container {
+    .header {
         max-width: 100%;
+        height: 90px;
         background-color: rgba(0,0,0,.9);
     }
 
-    .container .navbar {
+    .header .navBar {
         max-width: 100%;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 90px;
         flex-direction: column;
-        background-color: rgba(0,0,0,.9);
-        width: 100%;
-        height: 90vh;
-        z-index: 999;
-        text-align: center;
-        transition: .3s;
     }
 
-    .nav-menu.active {
-        left: 0;
+    .navBar .hamburger {
+        display: block;
+        color: white;
+        width: 50px;
+        height: 50px;
     }
 
-    .nav-item {
+   .navList{
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: fixed;
+    left: 0;
+    top: 4rem;
+    background-color: rgba(0,0,0,.9);
+    z-index: 999;
+    text-align: center;
+    transition: 0.5s;
+   }
+
+    .navItem {
         margin: 1.5rem 0;
     }
 
-    .container .navbar img {
+    .header .navBar img {
         width: 150px;
+    }
+    .logo{
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        left: 5%;
+
+        border: 2px solid red;
     }
 }
